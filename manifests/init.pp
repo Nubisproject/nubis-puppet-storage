@@ -39,13 +39,23 @@
 class nubis_storage {
 }
 
-define nubis::storage {
+define nubis::storage(
+    $user   = 'root',
+    $group  = 'root',
+){
   package { [ "ceph-fs-common", "ceph-common" ]:
     ensure => latest,
   }
 
-  file { ["/data", "/data/$name"]:
+  file { "/data":
     ensure => directory,
+  }
+
+  file { "/data/${name}":
+      ensure  => directory,
+      owner   => $user,
+      group   => $group,
+      require => File['/data'],
   }
 
   file { "/etc/ceph":
