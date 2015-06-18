@@ -39,24 +39,13 @@
 class nubis_storage {
 }
 
-define nubis::storage(
-    $user   = 'root',
-    $group  = 'root',
-){
-
+define nubis::storage {
   package { [ "ceph-fs-common", "ceph-common" ]:
     ensure => latest,
   }
 
-  file { '/data':
+  file { ["/data", "/data/$name"]:
     ensure => directory,
-  }
-
-  file { "/data/${name}":
-      ensure  => directory,
-      owner   => $user,
-      group   => $group,
-      require => File['/data'],
   }
 
   file { "/etc/ceph":
@@ -65,11 +54,11 @@ define nubis::storage(
 
   file { "/etc/ceph/ceph.conf":
     require => File["/etc/ceph"],
-    ensure  => present,
-    group   => 0,
-    owner   => 0,
-    mode    => 644,
-    source  => "puppet:///modules/${module_name}/ceph.conf",
+    ensure => present,
+    group => 0,
+    owner => 0,
+    mode => 644,
+    source => "puppet:///modules/${module_name}/ceph.conf",
   }
 
   mount { "/data/$name":
@@ -82,9 +71,9 @@ define nubis::storage(
 
   file { "/etc/nubis.d/ceph":
     ensure => present,
-    group  => 0,
-    owner  => 0,
-    mode   => 755,
+    group => 0,
+    owner => 0,
+    mode => 755,
     source => "puppet:///modules/${module_name}/ceph-startup",
   }
 }
