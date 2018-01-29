@@ -1,19 +1,44 @@
 # Change Log
 
-## [v1.2.3](https://github.com/nubisproject/nubis-puppet-storage/tree/v1.2.3) (2017-11-28)
-[Full Changelog](https://github.com/nubisproject/nubis-puppet-storage/compare/v1.2.2...v1.2.3)
+## [v1.2.5](https://github.com/nubisproject/nubis-puppet-storage/tree/v1.2.5) (2018-01-29)
+[Full Changelog](https://github.com/nubisproject/nubis-puppet-storage/compare/v1.2.4...v1.2.5)
+
+**Closed issues:**
+
+- EFS mount targets don't need the AZ prefix anymore [\#46](https://github.com/nubisproject/nubis-puppet-storage/issues/46)
+- Generate Prometheus metric exposing the EFS fsid we are using [\#45](https://github.com/nubisproject/nubis-puppet-storage/issues/45)
+- Remove hardcoded value [\#36](https://github.com/nubisproject/nubis-puppet-storage/issues/36)
 
 **Merged pull requests:**
 
+- EFS mount targets don't need AZ prefix anymore [\#49](https://github.com/nubisproject/nubis-puppet-storage/pull/49) ([gozer](https://github.com/gozer))
+- Create Prometheus metric exposing the EFS id [\#48](https://github.com/nubisproject/nubis-puppet-storage/pull/48) ([gozer](https://github.com/gozer))
+
+## [v1.2.4](https://github.com/nubisproject/nubis-puppet-storage/tree/v1.2.4) (2017-12-04)
+[Full Changelog](https://github.com/nubisproject/nubis-puppet-storage/compare/v1.2.3...v1.2.4)
+
+**Merged pull requests:**
+
+- Remove hard-coded test [\#44](https://github.com/nubisproject/nubis-puppet-storage/pull/44) ([gozer](https://github.com/gozer))
+
+## [v1.2.3](https://github.com/nubisproject/nubis-puppet-storage/tree/v1.2.3) (2017-11-28)
+[Full Changelog](https://github.com/nubisproject/nubis-puppet-storage/compare/v1.2.2...v1.2.3)
+
+**Closed issues:**
+
+- Puppet file mode should be a string [\#37](https://github.com/nubisproject/nubis-puppet-storage/issues/37)
+- Tag v1.2.3 release [\#41](https://github.com/nubisproject/nubis-puppet-storage/issues/41)
+- Tag v1.2.3 release [\#33](https://github.com/nubisproject/nubis-puppet-storage/issues/33)
+
+**Merged pull requests:**
+
+- Merge v1.2.3 release into develop. \[skip ci\] [\#43](https://github.com/nubisproject/nubis-puppet-storage/pull/43) ([tinnightcap](https://github.com/tinnightcap))
+- Update CHANGELOG for v1.2.3 release \[skip ci\] [\#42](https://github.com/nubisproject/nubis-puppet-storage/pull/42) ([tinnightcap](https://github.com/tinnightcap))
 - \[Centennial\] 1.2.3 [\#40](https://github.com/nubisproject/nubis-puppet-storage/pull/40) ([gozer](https://github.com/gozer))
 - Make file mode strings to keep Puppet 4 happy [\#38](https://github.com/nubisproject/nubis-puppet-storage/pull/38) ([gozer](https://github.com/gozer))
 
 ## [v1.2.2](https://github.com/nubisproject/nubis-puppet-storage/tree/v1.2.2) (2016-10-01)
 [Full Changelog](https://github.com/nubisproject/nubis-puppet-storage/compare/v1.2.1...v1.2.2)
-
-**Closed issues:**
-
-- Tag v1.2.3 release [\#33](https://github.com/nubisproject/nubis-puppet-storage/issues/33)
 
 **Merged pull requests:**
 
